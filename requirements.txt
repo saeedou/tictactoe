@@ -3,3 +3,4 @@ pytest-cov
 bddcli
 pylama
 pylint
+pudb
