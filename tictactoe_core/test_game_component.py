@@ -34,6 +34,17 @@ def test_board():
     assert board.winner('X') is True
 
 
+# doesn't check for winner, if all the board played it means tie
+def test_tie():
+    board = Board()
+    board.tie() is False
+
+    for i in range(1, 4):
+        for j in range(1, 4):
+            board.mark(i, j, 'X')
+    board.tie() is True
+
+
 def test_player():
     board = Board()
     player = Player(board)

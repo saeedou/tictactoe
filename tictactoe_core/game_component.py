@@ -42,6 +42,11 @@ class Board:
 
             return False
 
+    def tie(self):
+        if self.maptoboard.count(' ') == 9:
+            return True
+        return False
+
 
 class Player:
     def __init__(self, board: Board):
