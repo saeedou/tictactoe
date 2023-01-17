@@ -32,6 +32,11 @@ def test_board():
     board.mark(1, 3, 'X')
     # return the winner
     assert board.winner('X') is True
+    board.mark(3, 1, 'O')
+    board.mark(3, 2, 'O')
+    assert board.winner('O') is False
+    board.mark(3, 3, 'O')
+    assert board.winner('O') is True
 
 
 # doesn't check for winner, if all the board played it means tie
