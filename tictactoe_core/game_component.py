@@ -27,8 +27,9 @@ class Board:
 
         if self.maptoboard[index] == ' ':
             self.maptoboard[index] = sign
+            return True
         else:
-            return -1
+            return False
 
     def winner(self, sign):
         win_index_patterns = ['012', '345', '678', '036', '147', '258', '048',
@@ -46,7 +47,7 @@ class Board:
 
 
     def tie(self):
-        if self.maptoboard.count(' ') == 9:
+        if self.maptoboard.count(' ') == 0:
             return True
         return False
 
@@ -56,7 +57,7 @@ class Player:
         self.board = board
 
     def mark(self, col, row):
-        self.board.mark(col, row, 'X')
+        return self.board.mark(col, row, 'X')
 
 
 class Computer:
