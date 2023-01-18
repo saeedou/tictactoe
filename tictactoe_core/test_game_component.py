@@ -24,9 +24,9 @@ computer_move = '''
 
 def test_board():
     board = Board()
-    board.mark(1, 2, 'X')
+    assert board.mark(1, 2, 'X') is True
     assert board.board == BOARD12X
-    assert board.mark(1, 2, 'X') == -1
+    assert board.mark(1, 2, 'X') is False
     assert board.winner('X') is False
     board.mark(1, 1, 'X')
     board.mark(1, 3, 'X')
@@ -42,18 +42,20 @@ def test_board():
 # doesn't check for winner, if all the board played it means tie
 def test_tie():
     board = Board()
-    board.tie() is False
+    assert board.tie() is False
 
     for i in range(1, 4):
         for j in range(1, 4):
             board.mark(i, j, 'X')
-    board.tie() is True
+
+    assert board.tie() is True
 
 
 def test_player():
     board = Board()
     player = Player(board)
-    player.mark(1, 2)
+    assert player.mark(1, 2) is True
+    assert player.mark(1, 2) is False
     assert board.board == BOARD12X
 
 
