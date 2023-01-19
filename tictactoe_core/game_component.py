@@ -35,16 +35,15 @@ class Board:
         win_index_patterns = ['012', '345', '678', '036', '147', '258', '048',
                               '246']
         for pattern in win_index_patterns:
-                for i in pattern:
-                    is_winner = True
-                    if self.maptoboard[int(i)] != sign:
-                        is_winner = False
-                        break
-                if is_winner:
-                    return is_winner
+            for i in pattern:
+                is_winner = True
+                if self.maptoboard[int(i)] != sign:
+                    is_winner = False
+                    break
+            if is_winner:
+                return is_winner
 
         return False
-
 
     def tie(self):
         if self.maptoboard.count(' ') == 0:
