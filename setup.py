@@ -9,7 +9,7 @@ dependencies = [
 
 setup(
     name=PACKAGENAME,
-    version= '0.1.0',
+    version='0.1.0',
     description='tic tac toe game',
     long_description=open('README.md').read(),
     install_requires=dependencies,
