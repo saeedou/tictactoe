@@ -1,4 +1,4 @@
-from strategy import Strategy
+from tictactoe_core.strategy import Strategy
 
 
 def test_block_or_win():

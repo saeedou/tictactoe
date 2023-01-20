@@ -1,4 +1,4 @@
-from game_component import Board, Player, Computer
+from tictactoe_core.game_component import Board, Player, Computer
 
 BOARD12X = '''
     1   2   3

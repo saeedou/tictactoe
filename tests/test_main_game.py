@@ -1,7 +1,7 @@
 from unittest import mock
 
-from main_game import Game
-from game_component import Board, Player, Computer
+from tictactoe_core.main_game import Game
+from tictactoe_core.game_component import Board, Player, Computer
 
 
 STARTUP_MESSAGE = '''To play enter square coordinates(column, row)
