@@ -1,13 +1,11 @@
-PRJ = tictactoe
-
-
 .PHONY: test
 test:
-	pytest 
+	pytest
 
-.PHONY: make cover
+.PHONY: cover
 cover:
-	pytest --cov=$(PRJ) .
+	pytest --cov tictactoe_core/ tests/
+
 
 .PHONY: lint
 lint:
